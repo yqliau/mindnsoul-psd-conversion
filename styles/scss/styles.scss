@@ -1,2 +1,74 @@
 @import 'setup';
 @import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap');
+
+// font-family: 'Dokdo', cursive;
+// font-family: 'Lato', sans-serif;
+
+// generic styles
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p,h1,h2,h3,h4,h5,h6,ul,li,img,section,main,figure,article,aside,footer,header{padding:0;margin:0;}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: $baseFont;
+  background: $background2;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+
+// header styles
+
+header {
+  background-image: url(../assets/home-image-1.jpg);
+  background-size: cover;
+  height: 100vh;
+
+  // top bar and navigation links
+  a {
+    text-decoration: none;
+    color: $baseFont;
+  }
+
+  nav {
+    display: flex;
+    
+    ul {
+      flex: 1 0 50%;
+
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  .home {
+    color: $primary;
+  }
+
+  .logo {
+    font-family: 'Dokdo', cursive;
+    font-size: 41.5px;
+    color: $primary;
+  }
+
+  // title text
+  h1 {
+    font-family: 'Dokdo', cursive;
+    font-size: 115px;
+    color: $primary;
+  }
+}

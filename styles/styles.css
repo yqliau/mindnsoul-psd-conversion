@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap");
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -233,4 +234,69 @@ html {
           clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, li, img, section, main, figure, article, aside, footer, header {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #FAFFFE;
+  background: #1E140E;
+}
+
+.wrapper {
+  width: 95%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+li {
+  list-style-type: none;
+}
+
+header {
+  background-image: url(../assets/home-image-1.jpg);
+  background-size: cover;
+  height: 100vh;
+}
+header a {
+  text-decoration: none;
+  color: #FAFFFE;
+}
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+header nav ul {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+header .home {
+  color: #FFC600;
+}
+header .logo {
+  font-family: "Dokdo", cursive;
+  font-size: 41.5px;
+  color: #FFC600;
+}
+header h1 {
+  font-family: "Dokdo", cursive;
+  font-size: 115px;
+  color: #FFC600;
 }
