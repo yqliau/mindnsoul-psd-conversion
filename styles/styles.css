@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap");
 html {
   line-height: 1.15;
@@ -252,9 +253,23 @@ body {
   background: #1E140E;
 }
 
+p {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: "Dokdo", cursive;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 4.9px;
+  color: #FFC600;
+}
+
 .wrapper {
   width: 95%;
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
@@ -262,10 +277,32 @@ li {
   list-style-type: none;
 }
 
+button {
+  background: #555F02;
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px;
+}
+
 header {
   background-image: url(../assets/home-image-1.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
 }
 header a {
   text-decoration: none;
@@ -286,6 +323,14 @@ header nav ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 1px;
+}
+header nav li {
+  margin-left: 50px;
 }
 header .home {
   color: #FFC600;
@@ -295,8 +340,91 @@ header .logo {
   font-size: 41.5px;
   color: #FFC600;
 }
+header .title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 53%;
+}
+header p {
+  text-transform: lowercase;
+  font-size: 40px;
+  letter-spacing: 6px;
+  line-height: 20px;
+}
 header h1 {
   font-family: "Dokdo", cursive;
   font-size: 115px;
   color: #FFC600;
+}
+header img {
+  -webkit-filter: sepia(1);
+          filter: sepia(1);
+  position: absolute;
+  left: 0;
+  top: 35%;
+}
+
+.adventure {
+  padding: 200px 0 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.adventure .adventure-text {
+  width: 60%;
+}
+.adventure .adventure-text p {
+  margin-bottom: 20px;
+}
+.adventure img {
+  -webkit-box-shadow: -20px 20px #555F02;
+          box-shadow: -20px 20px #555F02;
+  max-width: 304px;
+  max-height: 304px;
+}
+
+.gallery {
+  background: #262725;
+  padding: 100px 0;
+}
+
+.gallery-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.offerings li::before {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 25px;
+  background: #555F02;
+  text-align: center;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding-top: 10px;
 }

@@ -20,14 +20,38 @@ body {
   background: $background2;
 }
 
+p {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 2px;
+}
+
+h2 {
+  font-family: 'Dokdo', cursive;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 4.9px;
+  color: $primary;
+}
+
 .wrapper {
   width: 95%;
-  max-width: 1400px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
 li {
   list-style-type: none;
+}
+
+button {
+  background: $secondary;
+  font-family: 'Dokdo', cursive;
+  color: $baseFont;
+  font-size: 30px;
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px;
 }
 
 
@@ -36,7 +60,14 @@ li {
 header {
   background-image: url(../assets/home-image-1.jpg);
   background-size: cover;
-  height: 100vh;
+  height: 80vh;
+  padding-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  position: relative;
 
   // top bar and navigation links
   a {
@@ -52,6 +83,16 @@ header {
 
       display: flex;
       justify-content: flex-end;
+
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 29px;
+      letter-spacing: 1px;
+    }
+
+    li {
+      margin-left: 50px;
     }
   }
 
@@ -66,9 +107,92 @@ header {
   }
 
   // title text
+  .title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 53%;
+  }
+
+  p {
+    text-transform: lowercase;
+    font-size: 40px;
+    letter-spacing: 6px;
+    line-height: 20px;
+  }
+  
   h1 {
     font-family: 'Dokdo', cursive;
     font-size: 115px;
     color: $primary;
+  }
+
+  img {
+    filter: sepia(1);
+    // height: 640px;
+
+    position: absolute;
+    left: 0;
+    top: 35%;
+  }
+}
+
+// adventure styles
+
+.adventure {
+  padding: 200px 0 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  .adventure-text {
+    width: 60%;
+
+    p {
+      margin-bottom: 20px;
+    }
+  }
+
+  img {
+    box-shadow: -20px 20px $secondary;
+    max-width: 304px;
+    max-height: 304px;
+  }
+}
+
+// gallery styles
+
+.gallery {
+  background: $background1;
+  padding: 100px 0;
+}
+
+.gallery-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// offerings
+
+.offerings {
+  li {
+    &::before {
+      content: '\f15b';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 25px;
+      background: $secondary;
+      text-align: center;
+
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 10px;
+    }
   }
 }
