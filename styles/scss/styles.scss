@@ -1,59 +1,10 @@
 @import 'setup';
-@import 'variables';
 @import url('https://fonts.googleapis.com/css2?family=Dokdo&family=Lato:wght@300;400;700&display=swap');
-
-// font-family: 'Dokdo', cursive;
-// font-family: 'Lato', sans-serif;
-
-// generic styles
-
-img {
-  max-width: 100%;
-  display: block;
-}
-
-p,h1,h2,h3,h4,h5,h6,ul,li,img,section,main,figure,article,aside,footer,header{padding:0;margin:0;}
-
-body {
-  font-family: 'Lato', sans-serif;
-  color: $baseFont;
-  background: $background2;
-}
-
-p {
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 2px;
-}
-
-h2 {
-  font-family: 'Dokdo', cursive;
-  font-size: 45px;
-  line-height: 58px;
-  letter-spacing: 4.9px;
-  color: $primary;
-}
-
-.wrapper {
-  width: 95%;
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-li {
-  list-style-type: none;
-}
-
-button {
-  background: $secondary;
-  font-family: 'Dokdo', cursive;
-  color: $baseFont;
-  font-size: 30px;
-  letter-spacing: 1.5px;
-  border: none;
-  padding: 10px;
-}
-
+@import 'variables';
+@import 'buttons';
+@import 'generic-styles';
+@import 'basic-fonts';
+@import 'mixins';
 
 // header styles
 
@@ -77,6 +28,10 @@ header {
 
   nav {
     display: flex;
+
+    i.fa-bars {
+      display: none;
+    }
     
     ul {
       flex: 1 0 50%;
@@ -96,7 +51,7 @@ header {
     }
   }
 
-  .home {
+  .current {
     color: $primary;
   }
 
@@ -107,13 +62,20 @@ header {
   }
 
   // title text
-  .title {
+
+  .outer-wrapper {
+    position: relative;
     flex-grow: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+  }
 
-    width: 53%;
+  .title {
+    margin: 0 0 85px 420px;
+    // margin: 0 0 5% 26.25%;
   }
 
   p {
@@ -121,28 +83,25 @@ header {
     font-size: 40px;
     letter-spacing: 6px;
     line-height: 20px;
-  }
-  
-  h1 {
-    font-family: 'Dokdo', cursive;
-    font-size: 115px;
-    color: $primary;
+    margin-left: 20px;
   }
 
   img {
     filter: sepia(1);
-    // height: 640px;
+    width: 43.4375%;
+    height: 90%;
+    object-fit: cover;
 
     position: absolute;
     left: 0;
-    top: 35%;
+    top: 25%;
   }
 }
 
 // adventure styles
 
 .adventure {
-  padding: 200px 0 100px;
+  padding: 20vh 0 10vh;
 
   display: flex;
   flex-wrap: wrap;
@@ -150,16 +109,12 @@ header {
   
   .adventure-text {
     width: 60%;
-
-    p {
-      margin-bottom: 20px;
-    }
   }
 
   img {
     box-shadow: -20px 20px $secondary;
-    max-width: 304px;
-    max-height: 304px;
+    width: 304px;
+    height: 304px;
   }
 }
 
@@ -167,21 +122,46 @@ header {
 
 .gallery {
   background: $background1;
-  padding: 100px 0;
-}
+  padding: 15vh 0;
 
-.gallery-list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
+  .gallery-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px 35px;
+  }
+  
+  li {
+    flex: 1 1 400px;
+  }
 
+  img {
+    width: 100%;
+  }
+}
 // offerings
 
 .offerings {
+  padding: 15vh 0;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px 15px;
+  }
+
   li {
+    flex: 1 1 400px;
+    margin-left: calc(4vw + 50px);
+    position: relative;
+
+    h2 {
+      text-align: left;
+    }
+
     &::before {
-      content: '\f15b';
+      content: '\f015';
       font-family: 'Font Awesome 5 Free';
       font-weight: 900;
       font-size: 25px;
@@ -193,6 +173,106 @@ header {
       height: 50px;
       border-radius: 50%;
       padding-top: 10px;
+
+      position: absolute;
+      right: calc(100% + 1vw + 10px);
     }
   }
+
+  .offering2::before {
+    content: '\f0c0';
+  }
+
+  .offering3::before {
+    content: '\f15b';
+  }
+
+  .offering4::before {
+    content: '\f095';
+  }
 }
+
+// Group programs
+
+.group-programs,
+.new-locations {
+  background: $background1;
+
+  .outer-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-text, 
+  .locations-text {
+    width: 30%;
+  }
+}
+
+.group-programs {
+  img {
+    box-shadow: 20px 20px $primary;
+    object-fit: cover;
+
+    position: relative;
+    top: -40px;
+  }
+
+  .programs-text {
+    margin-right: 10%;
+    padding-top: 10vh;
+  }
+}
+
+// New locations
+
+.new-locations {
+  img {
+    box-shadow: -20px 20px $primary;
+    object-fit: cover;
+
+    position: relative;
+    top: 40px;
+  }
+
+  h2 {
+    text-align: right;
+  }
+
+  button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .locations-text {
+    margin-left: 10%;
+    padding-top: 70px;
+  }
+}
+
+// Free trials
+
+.trials-text {
+  margin: 0 auto;
+  width: 60%;
+  padding: calc(10vh + 5px) 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+// footer
+
+footer {
+  background: $background1;
+  text-align: center;
+  padding: 5px 0;
+}
+
+@import 'media-queries';
