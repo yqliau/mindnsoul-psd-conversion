@@ -235,3 +235,27 @@
     }
   }
 }
+
+// overflow of content overlapping header 
+
+@media (max-height: 880px) {
+  .blog-post .img-container {
+    transition: .3s margin;
+    margin-top: -100px;
+  }
+
+  .submission-form {
+    transition: .3s margin;
+    margin-top: -5%;
+  }
+}
+
+@media (max-height: 575px) {
+  .blog-post .img-container {
+    margin-top: 0;
+  }
+
+  .submission-form {
+    margin-top: 0;
+  }
+}

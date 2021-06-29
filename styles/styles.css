@@ -701,7 +701,7 @@ footer {
 aside {
   background: #555F02;
   width: 390px;
-  margin: -1280px 0 50px;
+  margin: -1350px 0 50px;
   position: sticky;
   top: 50px;
   float: right;
@@ -739,6 +739,7 @@ aside ul li p {
 .blog-post img {
   -webkit-box-shadow: 20px 20px #555F02;
           box-shadow: 20px 20px #555F02;
+  width: 100%;
 }
 .blog-post .img-container {
   margin-top: -200px;
@@ -754,7 +755,7 @@ aside ul li p {
 .blog-post .blog-text {
   border-right: 5px solid #555F02;
   border-bottom: 5px solid #555F02;
-  padding: 15vh 50px 50px calc(100vw * 0.08);
+  padding: 10vh 50px 50px calc(100vw * 0.08);
 }
 .blog-post .blog-text p {
   padding-bottom: 5vh;
@@ -830,7 +831,6 @@ aside ul li p {
 }
 
 .contact-info {
-  margin-left: 20px;
   margin-top: 35px;
 }
 .contact-info a {
@@ -1051,5 +1051,27 @@ aside ul li p {
     -webkit-transition: 0.3s min-width;
     transition: 0.3s min-width;
     min-width: 50px;
+  }
+}
+@media (max-height: 880px) {
+  .blog-post .img-container {
+    -webkit-transition: 0.3s margin;
+    transition: 0.3s margin;
+    margin-top: -100px;
+  }
+
+  .submission-form {
+    -webkit-transition: 0.3s margin;
+    transition: 0.3s margin;
+    margin-top: -5%;
+  }
+}
+@media (max-height: 575px) {
+  .blog-post .img-container {
+    margin-top: 0;
+  }
+
+  .submission-form {
+    margin-top: 0;
   }
 }
