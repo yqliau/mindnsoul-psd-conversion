@@ -300,17 +300,6 @@ p {
   letter-spacing: 2px;
 }
 
-button {
-  background: #555F02;
-  font-family: "Dokdo", cursive;
-  color: #FAFFFE;
-  font-size: calc(1vw + 20px);
-  letter-spacing: 1.5px;
-  border: none;
-  padding: 10px;
-  margin-top: 20px;
-}
-
 header {
   padding-top: 30px;
   background-size: cover;
@@ -318,6 +307,11 @@ header {
 header a {
   text-decoration: none;
   color: #FAFFFE;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+header a:hover, header a:focus {
+  color: #FFC600;
 }
 header nav {
   display: -webkit-box;
@@ -353,6 +347,129 @@ header .logo {
   font-family: "Dokdo", cursive;
   font-size: 41.5px;
   color: #FFC600;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+header .logo:hover, header .logo:focus {
+  color: #FAFFFE;
+}
+
+.blog,
+.contact {
+  height: 65vh;
+}
+.blog .header-container,
+.contact .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.blog .title,
+.contact .title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 8px;
+}
+
+button {
+  background: #555F02;
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
+  font-size: calc(1vw + 20px);
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+  -webkit-transition: 0.3s background, 0.3s color;
+  transition: 0.3s background, 0.3s color;
+}
+button:hover, button:focus {
+  background: #FFC600;
+  color: #262725;
+}
+
+form {
+  padding-bottom: 10vh;
+}
+form .submission-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+form input,
+form textarea {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  color: #FAFFFE;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 30px;
+}
+form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+  opacity: 1;
+}
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  opacity: 1;
+}
+form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+  opacity: 1;
+}
+form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+  opacity: 1;
+}
+form input::placeholder,
+form textarea::placeholder {
+  opacity: 1;
+}
+form #name, form #email {
+  width: 48%;
+  border-bottom: 2px solid #FFC600;
+  margin-bottom: 40px;
+  -webkit-transition: 0.2s border-bottom;
+  transition: 0.2s border-bottom;
+}
+form #name:focus, form #name:active, form #email:focus, form #email:active {
+  outline: none;
+  border-bottom: 2px solid #FAFFFE;
+}
+form #comment {
+  width: 100%;
+  height: 225px;
+  border: 2px solid #FFC600;
+  margin-bottom: 25px;
+  -webkit-transition: 0.2s border;
+  transition: 0.2s border;
+}
+form #comment:focus, form #comment:active {
+  outline: none;
+  border: 2px solid #FAFFFE;
+}
+form button {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
 }
 
 .home {
@@ -578,33 +695,7 @@ footer {
 }
 
 .blog {
-  height: 65vh;
   background-image: url(../assets/blog-image-1.jpg);
-}
-.blog .blog-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 100%;
-}
-.blog .title {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 aside {
@@ -663,7 +754,7 @@ aside ul li p {
 .blog-post .blog-text {
   border-right: 5px solid #555F02;
   border-bottom: 5px solid #555F02;
-  padding: 75px 50px 50px 16%;
+  padding: 75px 50px 50px calc(100vw * 0.08);
 }
 .blog-post .blog-text p {
   padding-bottom: 40px;
@@ -691,58 +782,70 @@ aside ul li p {
   min-width: 92px;
 }
 
-form {
-  padding-bottom: 10vh;
+.contact {
+  background-image: url(../assets/contact-image-1.jpg);
 }
-form .comment-name {
+
+.submission-form {
+  background: #262725;
+  -webkit-box-shadow: 20px 20px #FFC600;
+          box-shadow: 20px 20px #FFC600;
+  padding: 5%;
+  width: 75%;
+  margin: -15% 20px 20px -7%;
+}
+.submission-form input::-webkit-input-placeholder, .submission-form textarea::-webkit-input-placeholder {
+  opacity: 0.7;
+}
+.submission-form input::-moz-placeholder, .submission-form textarea::-moz-placeholder {
+  opacity: 0.7;
+}
+.submission-form input:-ms-input-placeholder, .submission-form textarea:-ms-input-placeholder {
+  opacity: 0.7;
+}
+.submission-form input::-ms-input-placeholder, .submission-form textarea::-ms-input-placeholder {
+  opacity: 0.7;
+}
+.submission-form input::placeholder,
+.submission-form textarea::placeholder {
+  opacity: 0.7;
+}
+
+.contact-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-form #name, form #email, form #comment {
-  font-size: 20px;
-  line-height: 32px;
-  letter-spacing: 2px;
-  color: #FAFFFE;
-  background: #1E140E;
-  border: none;
-  padding: 30px;
-}
-form #name::-webkit-input-placeholder, form #email::-webkit-input-placeholder, form #comment::-webkit-input-placeholder {
-  opacity: 1;
-}
-form #name::-moz-placeholder, form #email::-moz-placeholder, form #comment::-moz-placeholder {
-  opacity: 1;
-}
-form #name:-ms-input-placeholder, form #email:-ms-input-placeholder, form #comment:-ms-input-placeholder {
-  opacity: 1;
-}
-form #name::-ms-input-placeholder, form #email::-ms-input-placeholder, form #comment::-ms-input-placeholder {
-  opacity: 1;
-}
-form #name::placeholder, form #email::placeholder, form #comment::placeholder {
-  opacity: 1;
-}
-form #name, form #email {
-  width: 48%;
-  border-bottom: 2px solid #FFC600;
-  margin-bottom: 40px;
-}
-form #comment {
-  width: 100%;
-  height: 225px;
-  border: 2px solid #FFC600;
-  margin-bottom: 25px;
-}
-form button {
-  width: 100%;
-  text-align: center;
-  padding: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 10vh;
 }
 
+.contact-info {
+  margin-left: 20px;
+  margin-top: 35px;
+}
+.contact-info a {
+  color: #FFC600;
+  font-size: 28px;
+  margin-right: 25px;
+}
+.contact-info p:first-of-type {
+  margin: 20px 0 25px 0;
+}
+
+@media (max-width: 1500px) {
+  .contact-form .submission-form {
+    -webkit-transition: 0.2s margin;
+    transition: 0.2s margin;
+    margin-left: 0;
+  }
+}
 @media (max-width: 1200px) {
   .free-trials img {
     min-height: 40vh;
@@ -776,6 +879,15 @@ form button {
 .new-locations button {
     display: block;
     margin: 20px auto;
+  }
+}
+@media (max-width: 1100px) {
+  .submission-form {
+    width: 100%;
+  }
+
+  .contact-info {
+    padding-top: 35px 0;
   }
 }
 @media (max-width: 1000px) {
@@ -833,11 +945,38 @@ form button {
   header h1 {
     font-size: calc(10vw + 25px);
   }
-  header p {
+  header.home p {
     font-size: calc(3vw + 10px);
+  }
+
+  .submission-form {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  form #name, form #email {
+    display: block;
+    width: 100%;
+    margin-bottom: 25px;
+    padding: 10px;
+    font-size: calc(.5vw + 15px);
+  }
+  form #comment {
+    padding: 10px;
+    font-size: calc(.5vw + 15px);
   }
 }
 @media (max-width: 700px) {
+  .blog,
+.contact {
+    height: 100vh;
+    text-align: center;
+  }
+
+  header .title {
+    margin: 0 auto;
+  }
+
   .new-locations img {
     top: 0;
   }

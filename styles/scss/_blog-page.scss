@@ -1,21 +1,6 @@
-// header styles
-
+// header
 .blog {
-  height: 65vh;
-  background-image: url(../assets/blog-image-1.jpg);
-
-  .blog-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .title {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
+  background-image: url(../assets/blog-image-1.jpg)
 }
 
 // side-bar
@@ -72,7 +57,7 @@ aside {
   img {
     box-shadow: 20px 20px $secondary;
   }
-
+  
   .img-container {
     margin-top: -200px;
     padding-right: 20px;
@@ -91,7 +76,7 @@ aside {
     border-right: 5px solid $secondary;
     border-bottom: 5px solid $secondary;
 
-    padding: 75px 50px 50px 16%;
+    padding: 75px 50px 50px calc(100vw * 0.08);
 
     p {
       padding-bottom: 40px;
@@ -122,47 +107,5 @@ aside {
     .comment-pic {
       min-width: 92px;
     }
-  }
-}
-
-form {
-  padding-bottom: 10vh;
-
-  .comment-name {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  #name, #email, #comment {
-    font-size: 20px;
-    line-height: 32px;
-    letter-spacing: 2px;
-    color: $baseFont;
-    background: $background2;
-    border: none;
-    padding: 30px;
-    
-    &::placeholder {
-      opacity: 1;
-    }
-  }
-
-  #name, #email {
-    width: 48%;
-    border-bottom: 2px solid $primary;
-    margin-bottom: 40px;
-  }
-
-  #comment {
-    width: 100%;
-    height: 225px;
-    border: 2px solid $primary;
-    margin-bottom: 25px;
-  }
-
-  button {
-    width: 100%;
-    text-align: center;
-    padding: 5px;
   }
 }

@@ -1,15 +1,3 @@
-// button styling
-button {
-  background: $secondary;
-  font-family: 'Dokdo', cursive;
-  color: $baseFont;
-  font-size: calc(1vw + 20px);
-  letter-spacing: 1.5px;
-  border: none;
-  padding: 10px;
-  margin-top: 20px;
-}
-
 // top bar and navigation links
 header {
   padding-top: 30px;
@@ -18,6 +6,12 @@ header {
   a {
     text-decoration: none;
     color: $baseFont;
+    transition: color .3s;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
   }
 
   nav {
@@ -53,5 +47,32 @@ header {
     font-family: 'Dokdo', cursive;
     font-size: 41.5px;
     color: $primary;
+    transition: color .3s;
+
+    &:hover,
+    &:focus {
+      color: $baseFont;
+    }
+  }
+}
+
+// header styles - blog and contact
+
+.blog,
+.contact {
+  height: 65vh;
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    letter-spacing: 8px;
   }
 }

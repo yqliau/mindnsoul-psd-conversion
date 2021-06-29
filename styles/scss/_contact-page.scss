@@ -1,0 +1,45 @@
+// header styles
+
+.contact {
+  background-image: url(../assets/contact-image-1.jpg);
+}
+
+// message form styling
+
+.submission-form {
+  background: $background1;
+  box-shadow: 20px 20px $primary;
+  padding: 5%;
+  width: 75%;
+  margin: -15% 20px 20px -7%;
+
+  input,
+  textarea {
+   &::placeholder {
+     opacity: .7;
+   } 
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10vh;
+}
+
+.contact-info {
+  margin-left: 20px;
+  margin-top: 35px;
+
+  a {
+    color: $primary;
+    font-size: 28px;
+    margin-right: 25px;
+  }
+
+  p:first-of-type {
+    margin: 20px 0 25px 0;
+  }
+}

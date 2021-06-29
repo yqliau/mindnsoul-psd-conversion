@@ -5,20 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
+  
+  <!-- import stylesheet -->
   <link rel="stylesheet" href="./styles/styles.css">
+  <!-- import font awesome -->
+  <script src="https://kit.fontawesome.com/98d0b9a989.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
   <!-- Navigation bar -->
   <header class="blog">
-    <div class="wrapper blog-container">
+    <div class="wrapper header-container">
       <nav>
         <a href="./index.html" class="logo">Mindn’Soul</a>
         <ul>
           <i class="fas fa-bars"></i>
-          <li><a href="#Home">Home</a></li>
+          <li><a href="./index.html">Home</a></li>
           <li><a href="#About">About</a></li>
           <li><a href="#Blog" class="current">Blog</a></li>
-          <li><a href="#Contact">Contact</a></li>
+          <li><a href="./contact.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -90,7 +95,7 @@
 
         <!-- comment form -->
         <form action="#">
-          <div class="comment-name">
+          <div class="submission-info">
             <label for="name" class="sr-only">Name</label>
             <input type="text" name="name" id="name" placeholder="Name">
   
@@ -98,8 +103,8 @@
             <input type="email" name="email" id="email" placeholder="Email address">
           </div>
 
-          <label for="comment" class="sr-only">Comment</label>
-          <textarea name="comment" id="comment" placeholder="Comment"></textarea>
+          <label for="comment" class="sr-only">Message</label>
+          <textarea name="comment" id="comment" placeholder="Message"></textarea>
 
           <button>Post Comment</button>
         </form>

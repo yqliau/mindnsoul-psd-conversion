@@ -1,0 +1,59 @@
+// form styling
+
+form {
+  padding-bottom: 10vh;
+
+  .submission-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  input, 
+  textarea {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: $baseFont;
+    background: rgba(0,0,0,0);
+    border: none;
+    padding: 30px;
+    
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  #name, #email {
+    width: 48%;
+    border-bottom: 2px solid $primary;
+    margin-bottom: 40px;
+    transition: .2s border-bottom;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-bottom: 2px solid $baseFont;
+    }
+  }
+
+  #comment {
+    width: 100%;
+    height: 225px;
+    border: 2px solid $primary;
+    margin-bottom: 25px;
+    transition: .2s border;
+
+    &:focus,
+    &:active {
+      outline: none;
+      border: 2px solid $baseFont;
+    }
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+}
