@@ -1,0 +1,168 @@
+// header styles
+
+.blog {
+  height: 65vh;
+  background-image: url(../assets/blog-image-1.jpg);
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .title {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+// side-bar
+
+aside {
+  background: $secondary;
+  width: 390px;
+  margin: 350px 0 50px;
+
+  position: sticky;
+  top: 50px;
+  float: right;
+
+  img {
+    margin-left: auto;
+    position: relative;
+    top: -20px;
+  }
+
+  .sidebar-text {
+    margin: 0 25px;
+  }
+
+  h3 {
+    margin: 5px 0;
+  }
+
+  p {
+    margin-bottom: 35px;
+  }
+
+  ul {
+    margin: 15px 0 40px;
+
+    li {
+      list-style-type: disc;
+      color: $primary;
+      margin-left: 20px;
+
+      p {
+        margin: 0 0 0 10px;
+        color: $baseFont;
+      }
+    } 
+  }
+}
+
+
+// blog post
+
+.blog-post {
+  width: 62.9%;
+
+  img {
+    box-shadow: 20px 20px $secondary;
+  }
+
+  .img-container {
+    margin-top: -200px;
+    padding-right: 20px;
+  }
+
+  .author {
+    font-style: italic;
+    letter-spacing: 0;
+  }
+
+  .bold {
+    font-weight: bold;
+  }
+  
+  .blog-text {
+    border-right: 5px solid $secondary;
+    border-bottom: 5px solid $secondary;
+
+    padding: 75px 50px 50px 16%;
+
+    p {
+      padding-bottom: 40px;
+    }
+  }
+}
+
+// Comments
+
+.comments {
+  padding-top: 50px;
+  margin-right: 33.9%;
+
+  h2 {
+    color: $baseFont;
+  }
+
+  .comment-info {
+    color: $primary;
+    margin-bottom: 10px;
+  }
+
+  .comment {
+    display: flex;
+    gap: 40px;
+    padding: 35px 0;
+
+    .comment-pic {
+      min-width: 92px;
+    }
+  }
+}
+
+form {
+  padding-bottom: 10vh;
+
+  .comment-name {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #name, #email, #comment {
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: 2px;
+    color: $baseFont;
+    background: $background2;
+    border: none;
+    padding: 30px;
+    
+    &::placeholder {
+      opacity: 1;
+    }
+  }
+
+  #name, #email {
+    width: 48%;
+    border-bottom: 2px solid $primary;
+    margin-bottom: 40px;
+  }
+
+  #comment {
+    width: 100%;
+    height: 225px;
+    border: 2px solid $primary;
+    margin-bottom: 25px;
+  }
+
+  button {
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+  }
+}

@@ -1,6 +1,7 @@
 h1 {
   font-family: 'Dokdo', cursive;
   font-size: 115px;
+  font-weight: lighter;
   line-height: 1.1;
   color: $primary;
 }
@@ -8,9 +9,17 @@ h1 {
 h2 {
   font-family: 'Dokdo', cursive;
   font-size: 45px;
+  font-weight: lighter;
   line-height: 58px;
   letter-spacing: 4.9px;
   color: $primary;
+}
+
+h3 {
+  font-family: 'Dokdo', cursive;
+  font-size: 28px;
+  letter-spacing: 4.5px;
+  font-weight: lighter;
 }
 
 p {

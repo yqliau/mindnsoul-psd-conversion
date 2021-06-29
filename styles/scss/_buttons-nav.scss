@@ -1,0 +1,57 @@
+// button styling
+button {
+  background: $secondary;
+  font-family: 'Dokdo', cursive;
+  color: $baseFont;
+  font-size: calc(1vw + 20px);
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+// top bar and navigation links
+header {
+  padding-top: 30px;
+  background-size: cover;
+
+  a {
+    text-decoration: none;
+    color: $baseFont;
+  }
+
+  nav {
+    display: flex;
+
+    i.fa-bars {
+      display: none;
+    }
+    
+    ul {
+      flex: 1 0 50%;
+
+      display: flex;
+      justify-content: flex-end;
+
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 29px;
+      letter-spacing: 1px;
+    }
+
+    li {
+      margin-left: 50px;
+    }
+  }
+
+  .current {
+    color: $primary;
+  }
+
+  .logo {
+    font-family: 'Dokdo', cursive;
+    font-size: 41.5px;
+    color: $primary;
+  }
+}

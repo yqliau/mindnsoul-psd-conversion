@@ -237,17 +237,6 @@ html {
   overflow: hidden;
 }
 
-button {
-  background: #555F02;
-  font-family: "Dokdo", cursive;
-  color: #FAFFFE;
-  font-size: calc(1vw + 20px);
-  letter-spacing: 1.5px;
-  border: none;
-  padding: 10px;
-  margin-top: 20px;
-}
-
 img {
   max-width: 100%;
   display: block;
@@ -284,6 +273,7 @@ li {
 h1 {
   font-family: "Dokdo", cursive;
   font-size: 115px;
+  font-weight: lighter;
   line-height: 1.1;
   color: #FFC600;
 }
@@ -291,9 +281,17 @@ h1 {
 h2 {
   font-family: "Dokdo", cursive;
   font-size: 45px;
+  font-weight: lighter;
   line-height: 58px;
   letter-spacing: 4.9px;
   color: #FFC600;
+}
+
+h3 {
+  font-family: "Dokdo", cursive;
+  font-size: 28px;
+  letter-spacing: 4.5px;
+  font-weight: lighter;
 }
 
 p {
@@ -302,22 +300,20 @@ p {
   letter-spacing: 2px;
 }
 
+button {
+  background: #555F02;
+  font-family: "Dokdo", cursive;
+  color: #FAFFFE;
+  font-size: calc(1vw + 20px);
+  letter-spacing: 1.5px;
+  border: none;
+  padding: 10px;
+  margin-top: 20px;
+}
+
 header {
-  background-image: url(../assets/home-image-1.jpg);
-  background-size: cover;
-  height: 80vh;
   padding-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: relative;
+  background-size: cover;
 }
 header a {
   text-decoration: none;
@@ -358,7 +354,23 @@ header .logo {
   font-size: 41.5px;
   color: #FFC600;
 }
-header .outer-wrapper {
+
+.home {
+  background-image: url(../assets/home-image-1.jpg);
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  position: relative;
+}
+.home .outer-wrapper {
   position: relative;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
@@ -377,17 +389,17 @@ header .outer-wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
-header .title {
+.home .title {
   margin: 0 0 85px 420px;
 }
-header p {
+.home p {
   text-transform: lowercase;
   font-size: 40px;
   letter-spacing: 6px;
   line-height: 20px;
   margin-left: 20px;
 }
-header img {
+.home img {
   -webkit-filter: sepia(1);
           filter: sepia(1);
   width: 43.4375%;
@@ -565,6 +577,172 @@ footer {
   padding: 5px 0;
 }
 
+.blog {
+  height: 65vh;
+  background-image: url(../assets/blog-image-1.jpg);
+}
+.blog .blog-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+.blog .title {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside {
+  background: #555F02;
+  width: 390px;
+  margin: 350px 0 50px;
+  position: sticky;
+  top: 50px;
+  float: right;
+}
+aside img {
+  margin-left: auto;
+  position: relative;
+  top: -20px;
+}
+aside .sidebar-text {
+  margin: 0 25px;
+}
+aside h3 {
+  margin: 5px 0;
+}
+aside p {
+  margin-bottom: 35px;
+}
+aside ul {
+  margin: 15px 0 40px;
+}
+aside ul li {
+  list-style-type: disc;
+  color: #FFC600;
+  margin-left: 20px;
+}
+aside ul li p {
+  margin: 0 0 0 10px;
+  color: #FAFFFE;
+}
+
+.blog-post {
+  width: 62.9%;
+}
+.blog-post img {
+  -webkit-box-shadow: 20px 20px #555F02;
+          box-shadow: 20px 20px #555F02;
+}
+.blog-post .img-container {
+  margin-top: -200px;
+  padding-right: 20px;
+}
+.blog-post .author {
+  font-style: italic;
+  letter-spacing: 0;
+}
+.blog-post .bold {
+  font-weight: bold;
+}
+.blog-post .blog-text {
+  border-right: 5px solid #555F02;
+  border-bottom: 5px solid #555F02;
+  padding: 75px 50px 50px 16%;
+}
+.blog-post .blog-text p {
+  padding-bottom: 40px;
+}
+
+.comments {
+  padding-top: 50px;
+  margin-right: 33.9%;
+}
+.comments h2 {
+  color: #FAFFFE;
+}
+.comments .comment-info {
+  color: #FFC600;
+  margin-bottom: 10px;
+}
+.comments .comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 40px;
+  padding: 35px 0;
+}
+.comments .comment .comment-pic {
+  min-width: 92px;
+}
+
+form {
+  padding-bottom: 10vh;
+}
+form .comment-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+form #name, form #email, form #comment {
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 2px;
+  color: #FAFFFE;
+  background: #1E140E;
+  border: none;
+  padding: 30px;
+}
+form #name::-webkit-input-placeholder, form #email::-webkit-input-placeholder, form #comment::-webkit-input-placeholder {
+  opacity: 1;
+}
+form #name::-moz-placeholder, form #email::-moz-placeholder, form #comment::-moz-placeholder {
+  opacity: 1;
+}
+form #name:-ms-input-placeholder, form #email:-ms-input-placeholder, form #comment:-ms-input-placeholder {
+  opacity: 1;
+}
+form #name::-ms-input-placeholder, form #email::-ms-input-placeholder, form #comment::-ms-input-placeholder {
+  opacity: 1;
+}
+form #name::placeholder, form #email::placeholder, form #comment::placeholder {
+  opacity: 1;
+}
+form #name, form #email {
+  width: 48%;
+  border-bottom: 2px solid #FFC600;
+  margin-bottom: 40px;
+}
+form #comment {
+  width: 100%;
+  height: 225px;
+  border: 2px solid #FFC600;
+  margin-bottom: 25px;
+}
+form button {
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+}
+
 @media (max-width: 1200px) {
   .free-trials img {
     min-height: 40vh;
@@ -605,13 +783,13 @@ footer {
     width: 90%;
   }
 
-  header {
+  header.home {
     height: 100vh;
   }
-  header img {
+  header.home img {
     display: none;
   }
-  header .title {
+  header.home .title {
     margin: 0 auto 20%;
   }
 

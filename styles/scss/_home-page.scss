@@ -1,0 +1,224 @@
+// header styles
+
+.home {
+  background-image: url(../assets/home-image-1.jpg);
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  
+  position: relative;
+
+  // title text
+
+  .outer-wrapper {
+    position: relative;
+    flex-grow: 1;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .title {
+    margin: 0 0 85px 420px;
+  }
+
+  p {
+    text-transform: lowercase;
+    font-size: 40px;
+    letter-spacing: 6px;
+    line-height: 20px;
+    margin-left: 20px;
+  }
+
+  img {
+    filter: sepia(1);
+    width: 43.4375%;
+    height: 90%;
+    object-fit: cover;
+
+    position: absolute;
+    left: 0;
+    top: 25%;
+  }
+}
+
+// adventure styles
+
+.adventure {
+  padding: 20vh 0 10vh;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  .adventure-text {
+    width: 60%;
+  }
+
+  img {
+    box-shadow: -20px 20px $secondary;
+    width: 304px;
+    height: 304px;
+  }
+}
+
+// gallery styles
+
+.gallery {
+  background: $background1;
+  padding: 15vh 0;
+
+  .gallery-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 35px 35px;
+  }
+  
+  li {
+    flex: 1 1 400px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+// offerings
+
+.offerings {
+  padding: 15vh 0;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px 15px;
+  }
+
+  li {
+    flex: 1 1 400px;
+    margin-left: calc(4vw + 50px);
+    position: relative;
+
+    h2 {
+      text-align: left;
+    }
+
+    &::before {
+      content: '\f015';
+      font-family: 'Font Awesome 5 Free';
+      font-weight: 900;
+      font-size: 25px;
+      background: $secondary;
+      text-align: center;
+
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      padding-top: 10px;
+
+      position: absolute;
+      right: calc(100% + 1vw + 10px);
+    }
+  }
+
+  .offering2::before {
+    content: '\f0c0';
+  }
+
+  .offering3::before {
+    content: '\f15b';
+  }
+
+  .offering4::before {
+    content: '\f095';
+  }
+}
+
+// Group programs
+
+.group-programs,
+.new-locations {
+  background: $background1;
+
+  .outer-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs-text, 
+  .locations-text {
+    width: 30%;
+  }
+}
+
+.group-programs {
+  img {
+    box-shadow: 20px 20px $primary;
+    object-fit: cover;
+
+    position: relative;
+    top: -40px;
+  }
+
+  .programs-text {
+    margin-right: 10%;
+    padding-top: 10vh;
+  }
+}
+
+// New locations
+
+.new-locations {
+  img {
+    box-shadow: -20px 20px $primary;
+    object-fit: cover;
+
+    position: relative;
+    top: 40px;
+  }
+
+  h2 {
+    text-align: right;
+  }
+
+  button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .locations-text {
+    margin-left: 10%;
+    padding-top: 70px;
+  }
+}
+
+// Free trials
+
+.trials-text {
+  margin: 0 auto;
+  width: 60%;
+  padding: calc(10vh + 5px) 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto;
+  }
+}
+
+// footer
+
+footer {
+  background: $background1;
+  text-align: center;
+  padding: 5px 0;
+}
