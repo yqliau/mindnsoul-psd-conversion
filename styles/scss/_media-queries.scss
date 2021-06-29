@@ -44,7 +44,51 @@
   }
 
   // blog page
+  aside {
+    float: none;
+    position: static;
+    margin: 8% auto 0;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 
+    img {
+      margin: 0 auto;
+    }
+
+    .sidebar-text {
+      margin: 5% 5% 0 5%;
+      flex: 1 0 260px;
+    }
+  }
+
+  .blog-post {
+    width: 90%;
+    margin: 0 auto;
+
+    h2 {
+      text-align: left;
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .blog-text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .comments {
+    margin-right: 0;
+
+    h2 {
+      text-align: left;
+    }
+  }
 
 }
 
@@ -170,6 +214,24 @@
 
     h2 {
       text-align: left;
+    }
+  }
+
+  // blog
+  .blog-post .img-container {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .comments {
+    .comment {
+      gap: 15px;
+    }
+    
+    .comment-pic {
+      transition: .3s min-width;
+      min-width: 50px;
     }
   }
 }

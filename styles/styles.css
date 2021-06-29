@@ -701,7 +701,7 @@ footer {
 aside {
   background: #555F02;
   width: 390px;
-  margin: 350px 0 50px;
+  margin: -1280px 0 50px;
   position: sticky;
   top: 50px;
   float: right;
@@ -754,10 +754,13 @@ aside ul li p {
 .blog-post .blog-text {
   border-right: 5px solid #555F02;
   border-bottom: 5px solid #555F02;
-  padding: 75px 50px 50px calc(100vw * 0.08);
+  padding: 15vh 50px 50px calc(100vw * 0.08);
 }
 .blog-post .blog-text p {
-  padding-bottom: 40px;
+  padding-bottom: 5vh;
+}
+.blog-post .blog-text p:last-of-type {
+  padding: 0;
 }
 
 .comments {
@@ -768,8 +771,8 @@ aside ul li p {
   color: #FAFFFE;
 }
 .comments .comment-info {
-  color: #FFC600;
   margin-bottom: 10px;
+  color: #FFC600;
 }
 .comments .comment {
   display: -webkit-box;
@@ -778,7 +781,7 @@ aside ul li p {
   gap: 40px;
   padding: 35px 0;
 }
-.comments .comment .comment-pic {
+.comments .comment-pic {
   min-width: 92px;
 }
 
@@ -879,6 +882,54 @@ aside ul li p {
 .new-locations button {
     display: block;
     margin: 20px auto;
+  }
+
+  aside {
+    float: none;
+    position: static;
+    margin: 8% auto 0;
+    width: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  aside img {
+    margin: 0 auto;
+  }
+  aside .sidebar-text {
+    margin: 5% 5% 0 5%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 260px;
+            flex: 1 0 260px;
+  }
+
+  .blog-post {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .blog-post h2 {
+    text-align: left;
+  }
+  .blog-post img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .blog-post .blog-text {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .comments {
+    margin-right: 0;
+  }
+  .comments h2 {
+    text-align: left;
   }
 }
 @media (max-width: 1100px) {
@@ -986,5 +1037,19 @@ aside ul li p {
   }
   .trials-text h2 {
     text-align: left;
+  }
+
+  .blog-post .img-container {
+    margin-top: 0;
+  }
+}
+@media (max-width: 460px) {
+  .comments .comment {
+    gap: 15px;
+  }
+  .comments .comment-pic {
+    -webkit-transition: 0.3s min-width;
+    transition: 0.3s min-width;
+    min-width: 50px;
   }
 }
