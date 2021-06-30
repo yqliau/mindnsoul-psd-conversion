@@ -22,10 +22,8 @@
 }
 
 .contact-form {
-  display: flex;
+  @include flexbox($align-items: center);
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
   padding-bottom: 10vh;
 }
 

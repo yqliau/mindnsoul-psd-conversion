@@ -4,10 +4,8 @@
   background-image: url(../assets/home-image-1.jpg);
   height: 80vh;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  
+  @include flexbox(column, flex-start, flex-end);
+
   position: relative;
 
   // title text
@@ -16,10 +14,7 @@
     position: relative;
     flex-grow: 1;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(column, center, center);
   }
 
   .title {
@@ -51,9 +46,8 @@
 .adventure {
   padding: 20vh 0 10vh;
 
-  display: flex;
+  @include flexbox();
   flex-wrap: wrap;
-  justify-content: space-between;
   
   .adventure-text {
     width: 60%;
@@ -73,14 +67,14 @@
   padding: 15vh 0;
 
   .gallery-list {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox();
+
     flex-wrap: wrap;
     gap: 35px 35px;
   }
   
   li {
-    flex: 1 1 400px;
+    flex: 1 1 225px;
   }
 
   img {
@@ -93,8 +87,8 @@
   padding: 15vh 0;
 
   ul {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox();
+
     flex-wrap: wrap;
     gap: 50px 15px;
   }
@@ -147,8 +141,7 @@
   background: $background1;
 
   .outer-wrapper {
-    display: flex;
-    justify-content: space-between;
+    @include flexbox();
   }
 
   .programs-text, 
@@ -213,12 +206,4 @@
     display: block;
     margin: 20px auto;
   }
-}
-
-// footer
-
-footer {
-  background: $background1;
-  text-align: center;
-  padding: 5px 0;
 }

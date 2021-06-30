@@ -1,3 +1,5 @@
+// generic styles
+
 img {
   max-width: 100%;
   display: block;
@@ -26,4 +28,12 @@ body {
 
 li {
   list-style-type: none;
+}
+
+// footer
+
+footer {
+  background: $background1;
+  text-align: center;
+  padding: 5px 0;
 }

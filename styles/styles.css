@@ -270,28 +270,36 @@ li {
   list-style-type: none;
 }
 
+footer {
+  background: #262725;
+  text-align: center;
+  padding: 5px 0;
+}
+
 h1 {
-  font-family: "Dokdo", cursive;
+  font-family: "Dokdo";
+  color: #FFC600;
   font-size: 115px;
   font-weight: lighter;
   line-height: 1.1;
-  color: #FFC600;
 }
 
 h2 {
-  font-family: "Dokdo", cursive;
+  font-family: "Dokdo";
+  color: #FFC600;
   font-size: 45px;
   font-weight: lighter;
   line-height: 58px;
   letter-spacing: 4.9px;
-  color: #FFC600;
 }
 
 h3 {
-  font-family: "Dokdo", cursive;
+  font-family: "Dokdo";
+  color: #FAFFFE;
   font-size: 28px;
-  letter-spacing: 4.5px;
   font-weight: lighter;
+  line-height: 1.15;
+  letter-spacing: 4.5px;
 }
 
 p {
@@ -482,6 +490,9 @@ form button {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -533,11 +544,18 @@ form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .adventure .adventure-text {
   width: 60%;
@@ -557,17 +575,24 @@ form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 35px 35px;
 }
 .gallery li {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 400px;
-          flex: 1 1 400px;
+      -ms-flex: 1 1 225px;
+          flex: 1 1 225px;
 }
 .gallery img {
   width: 100%;
@@ -580,9 +605,16 @@ form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 50px 15px;
@@ -631,9 +663,16 @@ form button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 .group-programs .programs-text,
 .group-programs .locations-text,
@@ -686,12 +725,6 @@ form button {
 .trials-text button {
   display: block;
   margin: 20px auto;
-}
-
-footer {
-  background: #262725;
-  text-align: center;
-  padding: 5px 0;
 }
 
 .blog {
@@ -819,14 +852,18 @@ aside ul li p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 10vh;
 }
 
