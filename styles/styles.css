@@ -879,6 +879,41 @@ aside ul li p {
   margin: 20px 0 25px 0;
 }
 
+.modal {
+  z-index: 25;
+  width: 50vw;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background: #1E140E;
+  padding: 3%;
+  border: solid 3px #FFC600;
+  border-radius: 35px;
+  text-align: center;
+}
+.modal i {
+  font-size: 50px;
+  color: #FFC600;
+  position: absolute;
+  right: 25px;
+  top: 25px;
+  -webkit-transition: 0.2s color;
+  transition: 0.2s color;
+}
+.modal i:hover {
+  color: #FAFFFE;
+}
+
+.blackout-effect {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 @media (max-width: 1500px) {
   .contact-form .submission-form {
     -webkit-transition: 0.2s margin;
