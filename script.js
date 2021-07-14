@@ -1,62 +1,76 @@
-// define global variables
-const buttonList = document.querySelectorAll('button');
-const blackoutBackground = document.querySelector('.blackout-div');
-const modalCloseList = document.querySelectorAll('.fa-times-circle');
+// 7.12.2021 - update to code efficiency and organization
 
-// add event listeners to each button on the page
-for (const button of buttonList) {
-  button.addEventListener('click', function (e) {
-    // close existing modals (if any are currently open)
-    const currentModal = document.getElementsByClassName('visible')[0];
-    if (currentModal) {
-      removeModal();
+app = {};
+
+// create event listeners
+app.addModalEvents = () => {
+  // define variables
+  const buttonList = document.querySelectorAll('button');
+  const outerModalList = document.querySelectorAll('.outer-modal');
+
+  // attach listener on each button
+  buttonList.forEach((button) => {
+    button.addEventListener('click', app.buttonHandler);
+  });
+
+  // attach listener on each modal
+  outerModalList.forEach((outerModal) => {
+    outerModal.addEventListener('click', app.modalHandler);
+  });
+
+  // attach listener on escape key press
+  window.addEventListener('keyup', (event) => {
+    if (event.key === 'Escape') {
+      // call function to close open modals
+      app.checkOpenModals();
     }
-
-    // target the associated modal box that was clicked
-    const modalBoxLocation = e.target.nextElementSibling;
-
-    // trigger helper function to toggle modal visibility
-    addModal(modalBoxLocation);
   });
-}
+};
 
-// add event listener to each modal close button on the page
-for (const closeButton of modalCloseList) {
-  closeButton.addEventListener('click', function () {
-    // trigger helper function to close modal box
-    removeModal();
-  });
-}
+// helper function to handle button clicks
+app.buttonHandler = (event) => {
+  const selectedModal = event.currentTarget.nextElementSibling;
 
-// add event listener to escape key to close modal on keypress
-document.addEventListener('keydown', function (e) {
-  // retrieve list of modals (if any are currently open)
-  const currentModal = document.getElementsByClassName('visible')[0];
+  // close any existing modals (if any are still opened via keyboard navigation)
+  app.checkOpenModals();
 
-  // triggers only on Escape key and if a current Modal is open
-  if (e.key === 'Escape' && currentModal) {
-    removeModal();
+  // make modal visible
+  selectedModal.classList.add('open');
+};
+
+// helper function to check and close any modal that is currently open
+app.checkOpenModals = () => {
+  const openModal = document.querySelector('.open');
+
+  if (openModal) {
+    app.closeModal(openModal);
   }
-});
+};
 
-// add event listener to the blackout div to close modal on click
-blackoutBackground.addEventListener('click', function () {
-  // trigger helper function to close modal box
-  removeModal();
-});
+// helper function to handle blackout modal clicks
+app.modalHandler = (event) => {
+  // check if clicked outside the inner modal
+  const clickedOutside = !event.target.closest('.inner-modal');
+  // check if close button is clicked
+  const isCloseButton = event.target.tagName === 'I';
 
-// helper function to ADD visible modal classes
-function addModal(modalBox) {
-  modalBox.classList.toggle('visible');
-  blackoutBackground.classList.toggle('blackout-effect');
-}
+  const currentOuterModal = event.currentTarget;
 
-// helper function to REMOVE visible modal classes
-function removeModal() {
-  // target the modal that is currently open
-  const currentModal = document.getElementsByClassName('visible')[0];
+  // close associated modal if either is true
+  if (clickedOutside || isCloseButton) {
+    app.closeModal(currentOuterModal);
+  }
+};
 
-  // remove visible classes on modal and background
-  currentModal.classList.remove('visible');
-  blackoutBackground.classList.remove('blackout-effect');
-}
+// helper function to close the modal
+app.closeModal = (targetElement) => {
+  targetElement.classList.remove('open');
+};
+
+// init function expression
+app.init = () => {
+  app.addModalEvents();
+};
+
+// run init function
+app.init();
